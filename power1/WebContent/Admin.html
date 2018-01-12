@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin</title>
+<style type="text/css">
+#c{
+background-color: #d3e4ff;
+}
+.nav{
+background-color: #c0cee5;
+color: black;
+text align:center;
+padding: 20px 0 20px 0;
+}
+.nav >li{
+display: inline-block;
+padding:0 25px 0 25px; 
+}
+.nav > li > a{
+text-decoration: none;
+color: #ffffff;
+}
+.nav > li >a:hover{
+color: silver;
+}
+
+
+</style>
+<script type="text/javascript">
+	function validate(){
+		var e=document.frm.uid;
+		var p=document.frm.pid;
+		if(e.value==""){
+			alert("Enter login Id");
+			return false;
+		}
+		if(p.value==""){
+			alert("Enter Pass");
+			return false;
+		}
+	}
+
+
+</script>
+
+
+</head>
+<body id="c">
+<table  width="100%" height="50%" >
+<tr><th height="50" width="50%" align="center" ><b><Font color="white" ><font size="15"><img alt="" src="e3.jpg" height="60px" width="140px"><i>ESPC Limited</i></Font></b></th>
+<th align="center" ><font color="white" size="4px">Call Us At : 1800 3500 7896 </font></th>
+</tr>
+</table>
+<ul class="nav">
+<li><a href="Home.html">Home</a></li>
+<li><a href="Contact.html">Contacts<a></li>
+</ul>
+
+<table align="center">
+<form action="AdminLogin" name="frm" onsubmit="return validate()">
+<tr><th colspan="2" style="font-size: 20px;color: white;">Admin Login</th></tr>
+<tr><td>login id:</td><td><input type="email" name="uid" style="width: 250px; border-radius:5px;margin-top: 6px;margin-left: 14px"></td></tr>
+<tr><td>Password:</td><td><input type="password" name="pid" style="width: 250px; border-radius:5px;margin-top: 6px;margin-left: 14px"></td></tr>
+<tr><td></td><td align="right"><input type="submit" value="Login"></td></tr>
+</form>
+</table>
+
+	
+
+
+</form>
+</table>
+</body>
+</html>

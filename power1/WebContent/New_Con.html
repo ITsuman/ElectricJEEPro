@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>EPSC LTD.</title>
+<style type="text/css">
+#c{
+background-color: #d3e4ff;
+}
+.nav{
+background-color: #c0cee5;
+color: black;
+text align:center;
+padding: 20px 0 20px 0;
+}
+.nav >li{
+display: inline-block;
+padding:0 25px 0 25px; 
+}
+.nav > li > a{
+text-decoration: none;
+color: #ffffff;
+}
+.nav > li >a:hover{
+color: silver;
+}
+
+</style>
+<script type="text/javascript">
+	function validate(){
+		var r=document.frm.r1;
+		var e=document.frm.email;
+		var n=document.frm.myname;
+		var pn=document.frm.premises_no;
+		var st=document.frm.street;
+		var c=document.frm.city;
+		var pin=document.frm.pincode;
+		var ph=document.frm.contactno;
+		
+		if(e.value==""){
+			alert("Enter your email");
+			return false;
+		}
+		if(n.value==""){
+			alert("Enter your Name");
+			return false;
+		}
+		if(pn.value==""){
+			alert("Enter your house no");
+			return false;
+		}
+		if(st.value==""){
+			alert("Enter street");
+			return false;
+		}
+		if(c.value==""){
+			alert("Enter your city");
+			return false;
+		}
+		if(pin.value==""){
+			alert("Enter pincode");
+			return false;
+		}
+		if(ph.value==""){
+			alert("Enter your phnno");
+			return false;
+		}
+		if(ph.value.length!='10'){
+			alert("Phone no must be hold ten digit");
+			return false;
+		}
+		if(isNaN(ph.value)){
+			alert("Enter the phone no properly");
+			return false;
+		}
+		
+		
+	}
+
+
+
+
+</script>
+</head>
+<body id="c">
+<table  width="100%" height="50%" >
+<tr><th height="50" width="50%" align="center" ><b><Font color="white" ><font size="15"><img alt="" src="e3.jpg" height="60px" width="140px"><i>ESPC Limited</i></Font></b></th><th align="center" ><font color="white" size="4px">Call Us At : 1800 3500 7896</font></th>
+</tr>
+</table>
+<ul class="nav">
+<li><a href="Home.html">Home</a></li>
+<li><a href="New_Con.html">New Connection</a></li>
+<li><a href="Pay1.jsp">Pay Bill</a>
+<li><a href="Complain.jsp">Complain Request</a>
+<li><a href="Ac.jsp">AC Application</a>
+<li><a href="Contact.html">Contacts</a></li>
+</ul>
+<form action="NewCon" name="frm" onsubmit="return validate()">
+<table align="center">
+<tr><th colspan="2" style="font-size: 25px; color: white;">Enter Customer Details<br><hr style="border-top: 5px;"></th></tr>
+
+<tr><td>Connection type:</td><td><input type="radio" name="r1" value="LT" style="margin-left: 14px">LT<input type="radio" name="r1" value="HT">HT</td></tr>
+					<tr>
+                        <td>Email</td>
+                        <td><input type="email" name="email"  maxlength="100" style="width: 250px; border-radius:5px;margin-top: 6px;margin-left: 14px"></td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" name="myname"  maxlength="48" style="width: 250px;border-radius:5px;margin-top: 6px;margin-left: 14px"></td>
+                    </tr>
+                    <tr>
+                        <td>Premises No</td>
+                        <td><input type="text" name="premises_no" value="" maxlength="16" style="width: 100px;border-radius:5px;margin-top: 6px;margin-left: 14px"></td>
+                    </tr>
+                    <tr>
+                        <td>Street</td>
+                        <td><input type="text" name="street" maxlength="48" style="width: 150px;border-radius:5px;margin-top: 6px;margin-left: 14px"></td>
+                    </tr>
+                    <tr>
+                        <td>City</td>
+                        <td><input type="text" name="city"  maxlength="24" style="width: 100px;border-radius:5px;margin-top: 6px;margin-left: 14px"></td>
+                    </tr>
+                    <tr>
+                        <td>Pincode</td>
+                        <td><input type="text" name="pincode"  maxlength="6"  style="width: 100px;border-radius:5px;margin-top: 6px;margin-left: 14px;"></td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Number</td>
+                        <td><input type="text" name="contactno" maxlength="10"  style="width: 100px;border-radius:5px;margin-top: 6px;margin-left: 14px"></td>
+                    </tr>
+    <tr><td align="center" colspan="2"><input type="submit" value="Proceed"></td></tr>
+
+</table>
+
+
+</form>
+</body>
+</html>
